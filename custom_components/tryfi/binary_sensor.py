@@ -3,6 +3,7 @@ import logging
 from homeassistant.components.binary_sensor import (
     BinarySensorEntity,
     BinarySensorDeviceClass,
+
     #DEVICE_CLASS_BATTERY_CHARGING,
 )
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
