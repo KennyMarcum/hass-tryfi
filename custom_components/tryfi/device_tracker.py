@@ -2,8 +2,9 @@ import logging
 
 from homeassistant.components.device_tracker import SourceType #SOURCE_TYPE_GPS
 from homeassistant.components.device_tracker.config_entry import TrackerEntity
+from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
-    DEVICE_CLASS_BATTERY,
+    #DEVICE_CLASS_BATTERY,???
     PERCENTAGE,
     STATE_OK,
     STATE_PROBLEM,

@@ -1,9 +1,12 @@
 """Platform for sensor integration."""
 import logging
 
+from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
-    DEVICE_CLASS_BATTERY,
-    LENGTH_KILOMETERS,
+    UnitOfTime,
+    UnitOfLength,
+    #DEVICE_CLASS_BATTERY,
+    #LENGTH_KILOMETERS,
     PERCENTAGE,
     TIME_MINUTES,
     STATE_OK,
@@ -284,7 +287,7 @@ class PetStatsSensor(CoordinatorEntity, Entity):
     def unit_of_measurement(self):
         """Return the unit_of_measurement of the device."""
         if self.statType.upper() == "DISTANCE":
-            return LENGTH_KILOMETERS
+            return UnitOfLenght.KILOMETERS # LENGTH_KILOMETERS
         elif self.statType.upper() == "SLEEP":
             return TIME_MINUTES
         elif self.statType.upper() == "NAP":
@@ -340,7 +343,8 @@ class TryFiBatterySensor(CoordinatorEntity, Entity):
     @property
     def device_class(self):
         """Return the device class of the sensor."""
-        return DEVICE_CLASS_BATTERY
+        return SensorDeviceClass.BATTERY
+        #return DEVICE_CLASS_BATTERY
 
     @property
     def unit_of_measurement(self):
