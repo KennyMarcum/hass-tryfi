@@ -1,6 +1,6 @@
 DOMAIN = "tryfi"
 PLATFORMS = ["device_tracker", "light", "sensor", "select", "binary_sensor"]
-DEFAULT_POLLING_RATE = "10"
+DEFAULT_POLLING_RATE = "30"
 CONF_POLLING_RATE = "polling"
 CONF_USERNAME = "username"
 CONF_PASSWORD = "password"

@@ -287,7 +287,7 @@ class PetStatsSensor(CoordinatorEntity, Entity):
     def unit_of_measurement(self):
         """Return the unit_of_measurement of the device."""
         if self.statType.upper() == "DISTANCE":
-            return UnitOfLenght.KILOMETERS # LENGTH_KILOMETERS
+            return UnitOfLength.KILOMETERS # LENGTH_KILOMETERS
         elif self.statType.upper() == "SLEEP":
             return UnitOfTime.MINUTES #TIME_MINUTES
         elif self.statType.upper() == "NAP":
